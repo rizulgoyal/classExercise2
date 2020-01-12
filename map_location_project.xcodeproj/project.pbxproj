@@ -13,6 +13,7 @@
 		E0B6B8D823C7C11200922859 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B6B8D623C7C11200922859 /* Main.storyboard */; };
 		E0B6B8DA23C7C11400922859 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0B6B8D923C7C11400922859 /* Assets.xcassets */; };
 		E0B6B8DD23C7C11400922859 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B6B8DB23C7C11400922859 /* LaunchScreen.storyboard */; };
+		E0B6B96D23CAB22900922859 /* Places.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0B6B96C23CAB22900922859 /* Places.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E0B6B8D923C7C11400922859 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0B6B8DC23C7C11400922859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0B6B8DE23C7C11400922859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0B6B96C23CAB22900922859 /* Places.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Places.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				E0B6B8D623C7C11200922859 /* Main.storyboard */,
 				E0B6B8D923C7C11400922859 /* Assets.xcassets */,
 				E0B6B8DB23C7C11400922859 /* LaunchScreen.storyboard */,
+				E0B6B96C23CAB22900922859 /* Places.plist */,
 				E0B6B8DE23C7C11400922859 /* Info.plist */,
 			);
 			path = map_location_project;
@@ -127,6 +130,7 @@
 			files = (
 				E0B6B8DD23C7C11400922859 /* LaunchScreen.storyboard in Resources */,
 				E0B6B8DA23C7C11400922859 /* Assets.xcassets in Resources */,
+				E0B6B96D23CAB22900922859 /* Places.plist in Resources */,
 				E0B6B8D823C7C11200922859 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
