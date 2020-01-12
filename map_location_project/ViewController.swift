@@ -64,7 +64,13 @@ class ViewController: UIViewController {
     
     @objc func longPress(gestureRecogniser: UIGestureRecognizer)
     {
-        
+        let touchPoint = gestureRecogniser.location(in: mapView)
+                  let coordinate = mapView.convert(touchPoint, toCoordinateFrom: mapView)
+                  
+                  let annotation = MKPointAnnotation()
+                  annotation.coordinate = coordinate
+        mapView.removeAnnotation(annotation)
+
         if mapView.annotations.count < 3
         {
         let touchPoint = gestureRecogniser.location(in: mapView)
@@ -74,6 +80,8 @@ class ViewController: UIViewController {
             annotation.coordinate = coordinate
             annotation.subtitle = "Latitude: \(coordinate.latitude) Longitude : \(coordinate.longitude)"
             mapView.addAnnotation(annotation)
+            
+            
             let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
         let location2D = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
         locations.append(location2D)
@@ -163,6 +171,15 @@ class ViewController: UIViewController {
         mapView.delegate=self
             let polygon = MKPolygon(coordinates: &locations, count: locations.count)
             mapView.addOverlay(polygon)
+        
+        // add circle to the annotation
+        let overlays = locations.map{(MKCircle(center: $0, radius: 1000))}
+        mapView.addOverlays(overlays)
+        
+        
+        
+        
+        // end of circle
             
         
            
@@ -197,6 +214,11 @@ func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayR
     }
     return MKOverlayRenderer()
 }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        
+        mapView.removeAnnotation(view.annotation!)
+    }
 
 }
 
